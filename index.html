@@ -37,8 +37,8 @@
     <h1>Transform Your Life at Limitless Fitness</h1>
     <p>Unleash your strength, embrace the challenge, and join a community dedicated to your fitness journey.</p>
     <a href="#">Join Now</a>
-<!-- add alt text where necessary -->
-<!-- add responsive images for resolution switching -->
+<!-- add alt text where necessary A.REQ #5-->
+<!-- add responsive images for resolution switching, A.REQ #4 -->
     <img src="images/facility.jpg" alt=""
       srcset="images/facility.jpg,
               images/facility.jpg,
@@ -81,8 +81,8 @@
         <li>Specialty Workshops: From functional training to mindfulness sessions.</li>
         <li>Check out our [Class Schedule] for times and detailed descriptions.</li>
       </ul>
-<!-- add alt text where necessary -->
-<!-- add responsive images for resolution switching -->
+<!-- add alt text where necessary, A.REQ #5 -->
+<!-- add responsive images for resolution switching, A.REQ #4 -->
       <img src="images/classes.jpg" alt=""
         srcset="images/classes.jpg,
                 images/classes.jpg,
@@ -97,8 +97,8 @@
         Ready for a change?
       </p> 
       <a href="#">Book a Free Consultation today!</a>
-<!-- add alt text where necessary -->
-<!-- add responsive images for resolution switching -->
+<!-- add alt text where necessary, A.REQ #5 -->
+<!-- add responsive images for resolution switching, A.REQ #4 -->
       <img src="images/dumbells.jpg" alt=""
         srcset="images/dumbells.jpg,
                 images/dumbells.jpg,
@@ -117,17 +117,25 @@
       <section id="membership-form">
         <h3>Join Limitless Fitness Today!</h3>
         <p>Fill out the form below to kickstart your fitness journey:</p>
-<!--add accessibility to the form-->
-        Full Name
-        Email Address
-        Phone Number
-        Membership Type
-          Select a Membership Option
-          Monthly Membership
-          Annual Membership
-          Family & Group Plans
-        Tell us about your fitness goals:
-        Submit
+<!--add accessibility to the form, A.REQ #2-->
+        <form action="https://wp.zybooks.com/form-viewer.php" method="post">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+          <label for="phone">Phone Number</label> 
+          <input type="tel" id="phone" name="phone" autocomplete="tel" required>         
+          <label for="membership">Membership Type</label>
+          <select name="membership" id="membership" required>
+            <option value="" selected disabled>Select a Membership Option</option>
+            <option value="monthly">Monthly Membership</option>
+            <option value="annual">Annual Membership</option>
+            <option value="group">Family & Group Plans</option>
+          </select>
+          <label for="goals">Tell us about your fitness goals:</label>
+          <textarea name="goals" id="goals" required></textarea>
+          <input type="submit" value="Submit">
+        </form>
       </section>
     </section>
   </main>
